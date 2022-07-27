@@ -50,18 +50,18 @@ booklist = list(book)
 # booklist2 = ''.join(booklist2)
 # print(booklist2)
 
-'''Шаг диапазона в списке'''
-backwards = booklist[::-1] #перевернутая входная строка
-backwards = ''.join(backwards)
-print(backwards)
-
-every_over = booklist[::2] #срез данных
-every_over = "".join(every_over)
-print(every_over)
-
-booklist3 = booklist[4:14]
-booklist3 = ''.join(booklist3) #cut the word "Hitchhiker"
-print(booklist3)
-backward = booklist[13:3:-1]
-backward = ''.join(backward) #вырезать в обратном нарправлении
-print(backward)
+# '''Шаг диапазона в списке'''
+# backwards = booklist[::-1] #перевернутая входная строка
+# backwards = ''.join(backwards)
+# print(backwards)
+#
+# every_over = booklist[::2] #срез данных
+# every_over = "".join(every_over)
+# print(every_over)
+#
+# booklist3 = booklist[4:14]
+# booklist3 = ''.join(booklist3) #cut the word "Hitchhiker"
+# print(booklist3)
+# backward = booklist[13:3:-1]
+# backward = ''.join(backward) #вырезать в обратном нарправлении
+# print(backward)
