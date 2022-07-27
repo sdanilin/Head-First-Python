@@ -38,15 +38,30 @@
 # print(letters[:10]) #show all letters befour (except) index 10
 # print(letters[::2]) #every second letter
 
-'''Начало и конец диапазона в списке'''
-book = "The Hitchhicker's Guide to the Galaxt"
+# '''Начало и конец диапазона в списке'''
+book = "The Hitchhiker's Guide to the Galaxt"
 booklist = list(book)
-print(booklist)
-print(booklist[0:3])
-booklist = ''.join(booklist[0:3])
-print(booklist)
-booklist = ''.join(booklist[-6:])
-print(booklist)
+# print(booklist)
+# print(booklist[0:3])
+# booklist1 = booklist[0:3]
+# booklist1 = ''.join(booklist1)
+# print(booklist1)
+# booklist2 = booklist[-6:]
+# booklist2 = ''.join(booklist2)
+# print(booklist2)
 
 '''Шаг диапазона в списке'''
-backwards
+backwards = booklist[::-1] #перевернутая входная строка
+backwards = ''.join(backwards)
+print(backwards)
+
+every_over = booklist[::2] #срез данных
+every_over = "".join(every_over)
+print(every_over)
+
+booklist3 = booklist[4:14]
+booklist3 = ''.join(booklist3) #cut the word "Hitchhiker"
+print(booklist3)
+backward = booklist[13:3:-1]
+backward = ''.join(backward) #вырезать в обратном нарправлении
+print(backward)
