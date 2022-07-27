@@ -16,10 +16,10 @@
 # print(second)
 
 
-'''traning [square brackets]'''
-
-saying = "Don't panic!"
-letters = list(saying)
+# '''traning [square brackets]'''
+#
+# saying = "Don't panic!"
+# letters = list(saying)
 # print(letters)
 # print(letters[0])
 # print(letters[3])
@@ -32,8 +32,21 @@ letters = list(saying)
 # print(first)
 # print(last)
 
-'''letters[start:stop:step] if start is empty = default = 0; if stop is empty = default = max index in list; step default = 1'''
-print(letters[0:10:3]) #except index 10
-print(letters[3:]) #show all letters except firts three
-print(letters[:10]) #show all letters befour (except) index 10
-print(letters[::2]) #every second letter
+# '''letters[start:stop:step] if start is empty = default = 0; if stop is empty = default = max index in list; step default = 1'''
+# print(letters[0:10:3]) #except index 10
+# print(letters[3:]) #show all letters except firts three
+# print(letters[:10]) #show all letters befour (except) index 10
+# print(letters[::2]) #every second letter
+
+'''Начало и конец диапазона в списке'''
+book = "The Hitchhicker's Guide to the Galaxt"
+booklist = list(book)
+print(booklist)
+print(booklist[0:3])
+booklist = ''.join(booklist[0:3])
+print(booklist)
+booklist = ''.join(booklist[-6:])
+print(booklist)
+
+'''Шаг диапазона в списке'''
+backwards
