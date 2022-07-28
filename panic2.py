@@ -1,3 +1,5 @@
+'''Методы списков изменяют состояние данных, а квадратные скобки и срезы нет'''
+
 phrase = "Don't panic!"
 plist = list(phrase)
 print(phrase)
