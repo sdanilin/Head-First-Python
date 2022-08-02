@@ -31,3 +31,18 @@ for k in sorted(found): # sorted сортирует вывовод в алафа
 # Итерации по словарям с использованием items - возвращает список пар ключ/занчение
 for k, v in sorted(found.items()):
     print(k, 'was found', v, 'time(s).')
+
+# Предотвращение ошибок KeyError во время выполения
+fruits = {}
+fruits['apples'] = 10
+print(fruits)
+print('apples' in fruits) # значение связано с ключомб и при использовании оператора in для проверки существования ключа никакие ошибки не появились
+fruits = {}
+fruits['apples'] = 10
+print(fruits)
+print('apples' in fruits) # значение связано с ключомб и при использовании оператора in для проверки существования ключа никакие ошибки не появились
+if 'babanans' in fruits: # проверяем присутствие ключа bananas в словаре и если он отсутсвует, инициируем занчением 1
+    fruits['bananas'] += 1 # предотвращаем KeyError
+else:
+    fruits['bananas'] = 1
+print(fruits)
