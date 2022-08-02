@@ -33,10 +33,10 @@ for k, v in sorted(found.items()):
     print(k, 'was found', v, 'time(s).')
 
 # Предотвращение ошибок KeyError во время выполения
-fruits = {}
-fruits['apples'] = 10
-print(fruits)
-print('apples' in fruits) # значение связано с ключомб и при использовании оператора in для проверки существования ключа никакие ошибки не появились
+# fruits = {}
+# fruits['apples'] = 10
+# print(fruits)
+# print('apples' in fruits) # значение связано с ключомб и при использовании оператора in для проверки существования ключа никакие ошибки не появились
 fruits = {}
 fruits['apples'] = 10
 print(fruits)
@@ -45,4 +45,15 @@ if 'babanans' in fruits: # проверяем присутствие ключа 
     fruits['bananas'] += 1 # предотвращаем KeyError
 else:
     fruits['bananas'] = 1
+print(fruits)
+if 'pears' not in fruits:
+    fruits['pears'] = 0
+fruits['pears'] += 1
+print(fruits)
+if 'pears' not in fruits:
+    fruits['pears'] = 0
+fruits['pears'] += 1
+print(fruits)
+fruits.setdefault('pears', 0) # единственный вызов setdefault позволит заменить двухстрочную иструкцию if/not in
+fruits['pears'] += 1
 print(fruits)
