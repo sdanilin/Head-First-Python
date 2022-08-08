@@ -126,3 +126,5 @@ people['Robot'] = { 'Name': 'Marvin',
 print(people)
 import pprint #модуль который принимает любую структуру данных и вывадит ее в удобном для чтения формате
 pprint.pprint(people)
+print(people["Artur"]) #найдем запись с данными об Артуре
+print(people["Artur"] ['Occupation']) # укажем запись и укажем столбец
