@@ -94,7 +94,34 @@
 # vowels2[2] = 'I' #ничего не изменилось, потому что кортежы неизменяемы
 # print(vowels2) # если данные в вашей структуре никогда не меняются, положите их в кортеж
 
-t2 = ('Python',)
-type('t2')
-print(type(t2))
-print(t2)
+# t2 = ('Python',)
+# type('t2')
+# print(type(t2))
+# print(t2)
+
+
+'''Хранение данных в таблицах'''
+
+#Словарь Словарей
+people = {} # создадим новый пустой словарь
+people['Ford'] = { 'Name': 'Ford Prefect', #ключ Ford, а значение другой словарь
+              'Gender': 'Male',
+              'Occupation': 'Researcher',
+              'Home Planet': 'Betelgeuse Seven' }
+
+people['Artur'] = { 'Name': 'Artur Dent',
+              'Gender': 'Male',
+              'Occupation': 'Sendwich-Maker',
+              'Home Planet': 'Earth' }
+
+people['Trillian'] = { 'Name': 'Tricia McMillan',
+              'Gender': 'Female',
+              'Occupation': 'Mathematician',
+              'Home Planet': 'Earth' }
+
+people['Robot'] = { 'Name': 'Marvin',
+              'Gender': 'Unknown',
+              'Occupation': 'Paranoid Android',
+              'Home Planet': 'Unknown' }
+
+print(people)
