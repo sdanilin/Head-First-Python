@@ -123,5 +123,6 @@ people['Robot'] = { 'Name': 'Marvin',
               'Gender': 'Unknown',
               'Occupation': 'Paranoid Android',
               'Home Planet': 'Unknown' }
-
 print(people)
+import pprint #модуль который принимает любую структуру данных и вывадит ее в удобном для чтения формате
+pprint.pprint(people)
