@@ -1,4 +1,4 @@
-# '''Dictionaries'''
+# '''Dictionaries: list, dict, set, tuple'''
 #
 # person3 = { 'Name': 'Ford Prefect',
 #             'Gender': 'Male',

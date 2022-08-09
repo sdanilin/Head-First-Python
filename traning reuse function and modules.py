@@ -36,11 +36,29 @@
 # print(bool({'a':42, 'b':42}))
 
 
+# def search4vowels(word):
+#     """Возвращает булево значение в зависимости от присутствия любых гласных"""
+#     vowels = set('aeiou')
+#     found = vowels.intersection(set(word))  # intersection сообщил нам, что в переменной word содержаться глассные. Множество i включает все объекты их vowels7 которые так же присутствуют в set(word)
+#     return bool(found) #вызов функции bool и передача имени структуры данных, которая содержит результат поиска гласных
+# print(search4vowels('hitch-hiker'))
+# print(search4vowels('galaxy'))
+# print(search4vowels('sky'))
+
+# def search4vowels(word):
+#     """Возвращает, гласные, найденные в указанном слове"""
+#     vowels = set('aeiou')
+#     found = vowels.intersection(set(word))  # intersection сообщил нам, что в переменной word содержаться глассные. Множество i включает все объекты их vowels7 которые так же присутствуют в set(word)
+#     return found #возврат значений в виде структуры данных (множества)
+# print(search4vowels('hitch-hiker'))
+# print(search4vowels('galaxy'))
+# print(search4vowels('sky'))
+
 def search4vowels(word):
-    """Выводит гласные, найденные в указанном слове."""
+    """Возвращает, гласные, найденные в указанном слове"""
     vowels = set('aeiou')
-    found = vowels.intersection(set(word))  # intersection сообщил нам, что в переменной word содержаться глассные. Множество i включает все объекты их vowels7 которые так же присутствуют в set(word)
-    return bool(found) #вызов функции bool и передача имени структуры данных, которая содержит результат поиска гласных
+    return vowels.intersection(set(word))  #возврат данных без использования переменной found
 print(search4vowels('hitch-hiker'))
 print(search4vowels('galaxy'))
 print(search4vowels('sky'))
+
