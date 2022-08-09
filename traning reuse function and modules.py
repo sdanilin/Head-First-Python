@@ -62,3 +62,4 @@ print(search4vowels('hitch-hiker'))
 print(search4vowels('galaxy'))
 print(search4vowels('sky'))
 print(help(search4vowels)) #функция help отображает не только аннотации, но и строку документации
+
