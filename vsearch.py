@@ -1,7 +1,8 @@
-def search4vowels(word):
-    """Выводит гласные, найденные в указанном слове."""
+def search4vowels(word:str) -> set: #в аннотации указали, что в аргументе word ожидается строка. Указали, что функция возвращает множество
+    """Возвращает, гласные, найденные в указанном слове"""
     vowels = set('aeiou')
-    found = vowels.intersection(set(word))  # intersection сообщил нам, что в переменной word содержаться глассные. Множество i включает все объекты их vowels7 которые так же присутствуют в set(word)
-    for vowel in found:
-        print(vowel)
+    return vowels.intersection(set(word))  #возврат данных без использования переменной found
 print(search4vowels('hitch-hiker'))
+print(search4vowels('galaxy'))
+print(search4vowels('sky'))
+print(help(search4vowels)) #функция help отображает не только аннотации, но и строку документации
