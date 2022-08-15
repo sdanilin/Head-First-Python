@@ -21,3 +21,4 @@ def search4letters(phrase:str, letters:str='aeiou') -> set: #make 'letters' defa
 print(search4letters('life, the universe, and everything'))
 print(search4letters('life, the universe, and everything', 'aeiou'))
 print(search4vowels('life, the universe, and everything'))
+print(search4letters(letters='xyz', phrase='galaxy')) #порядок аргументов не важен если присваивать их по именам параметров
