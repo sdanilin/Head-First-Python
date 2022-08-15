@@ -2,6 +2,10 @@ def search4vowels(phrase:str) -> set: #в аннотации указали, ч�
     """Возвращает, гласные, найденные в указанном слове"""
     vowels = set('aeiou')
     return vowels.intersection(set(phrase))  #возврат данных без использования переменной found
+
+
+def search4letters(phrase:str, letters:str) -> set:
+
 print(search4vowels('hitch-hiker'))
 print(search4vowels('galaxy'))
 print(search4vowels('sky'))
