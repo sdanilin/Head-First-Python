@@ -5,6 +5,7 @@ def search4vowels(phrase:str) -> set: #в аннотации указали, ч�
 
 
 def search4letters(phrase:str, letters:str) -> set:
+    return set(letters).intersection(set(phrase)) #создаем объект множества из letters. найдем пересечение множества, созданного из letters с множеством созданным из phrase. И возвращаем результат вызывающему коду.
 
 print(search4vowels('hitch-hiker'))
 print(search4vowels('galaxy'))
