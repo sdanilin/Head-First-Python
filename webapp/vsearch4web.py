@@ -1,5 +1,5 @@
 import html
-from flask import Flask, render_template
+from flask import Flask, render_template, request #открывает доступ к переданным данным
 from vsearch import search4letters
 
 app = Flask(__name__)
@@ -10,7 +10,9 @@ def hello() -> str:
 
 @app.route('/search4', methods=['POST'])
 def do_search() -> str:
-    return str(search4letters('life, the univers, and everything', 'eiru,!'))
+    phrase = request.form['phtase'] #создаем новые переменные
+    letters = request.form['letters'] #и присваиваем им данные из HTML формы
+    return str(search4letters(phrase, letters)) #используем эти переменные в вызове "search4letters"
 
 @app.route('/entry')
 def entry_page() -> html:
