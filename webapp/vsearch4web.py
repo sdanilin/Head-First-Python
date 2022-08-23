@@ -1,12 +1,12 @@
 import html
-from flask import Flask, render_template, request #открывает доступ к переданным данным
+from flask import Flask, render_template, request, redirect #открывает доступ к переданным данным
 from vsearch import search4letters
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello() -> str:
-    return 'Hello world from Flask!'
+def hello() -> '302':
+    return redirect('/entry') #вызов функции redirect сообщает браузеру, что нужно запросить альтернативный URL (в нашем случае /entry)
 
 @app.route('/search4', methods=['POST'])
 def do_search() -> html:
