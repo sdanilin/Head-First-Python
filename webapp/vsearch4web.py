@@ -10,7 +10,7 @@ def hello() -> str:
 
 @app.route('/search4', methods=['POST'])
 def do_search() -> str:
-    phrase = request.form['phtase'] #создаем новые переменные
+    phrase = request.form['phrase'] #создаем новые переменные
     letters = request.form['letters'] #и присваиваем им данные из HTML формы
     return str(search4letters(phrase, letters)) #используем эти переменные в вызове "search4letters"
 
