@@ -4,12 +4,20 @@ from vsearch import search4letters
 
 app = Flask(__name__)
 
+
+def log_request(req: 'flask_request', res: str) -> None:
+    '''Последние изменения, реализующие журналирование всех веб-запросов'''
+    with open('vsaerch.log', 'a') as log:
+        print(req, res, file=log)
+
+
 @app.route('/search4', methods=['POST'])
 def do_search() -> html:
     phrase = request.form['phrase'] #создаем новые переменные
     letters = request.form['letters'] #и присваиваем им данные из HTML формы
     title = 'Here are your results:'
     results = str(search4letters(phrase, letters))
+    log_request(request, results) #Журнал хранится в файле "vsearclog"
     return render_template('results.html',
                             the_phrase=phrase,
                             the_letters=letters,
