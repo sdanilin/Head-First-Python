@@ -30,5 +30,12 @@ def entry_page() -> html:
     return render_template('entry.html',
                            the_title='Welcome tp search4letters on the web!')
 
+@app.route('/viewlog') #Добавили новый URL
+def view_the_log() -> str: #Объявили новую функцию, которая возващает строку
+    with open('vsaerch.log') as log: #открыть файл для чтения логов
+        contents = log.read()
+    return contents
+
+
 # if __name__ == '__main__':
 app.run(debug=True) #вызов app.run производится только когда программа запускается непосредственно
