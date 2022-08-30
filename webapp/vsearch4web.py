@@ -4,19 +4,23 @@ from vsearch import search4letters
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello() -> str:
-    return 'Hello world from Flask!'
-
 @app.route('/search4', methods=['POST'])
-def do_search() -> str:
+def do_search() -> html:
     phrase = request.form['phrase'] #создаем новые переменные
     letters = request.form['letters'] #и присваиваем им данные из HTML формы
-    return str(search4letters(phrase, letters)) #используем эти переменные в вызове "search4letters"
+    title = 'Here are your results:'
+    results = str(search4letters(phrase, letters))
+    return render_template('results.html',
+                            the_phrase=phrase,
+                            the_letters=letters,
+                            the_title=title,
+                            the_results=results,)
 
+@app.route('/')
 @app.route('/entry')
 def entry_page() -> html:
     return render_template('entry.html',
-                           the_title='Welcome tp search4letters on the web')
+                           the_title='Welcome tp search4letters on the web!')
 
-app.run(debug=True)
+if __name__ == '__main__':
+app.run(debug=True) #вызов app.run производится только когда программа запускается непосредственно
